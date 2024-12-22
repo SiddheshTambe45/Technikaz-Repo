@@ -1,14 +1,19 @@
-import React from 'react'
-import { redirect } from 'next/navigation'
-import SingleBlogPage from '@/components/SingleBlogPage'
+import React from "react";
+import { redirect } from "next/navigation";
+import SingleBlogPage from "@/components/SingleBlogPage";
 // import Ads from '@/components/Ads'
-import Upcomings from '@/components/Upcomings'
+import Upcomings from "@/components/Upcomings";
 
 const page = async ({ params }: { params: { slug: string } }) => {
-  const resolvedParams = await params // Await the params object
-  const slug = resolvedParams.slug || '' // Access `type` safely
+  // const resolvedParams = await params // Await the params object
+  // const slug = resolvedParams.slug || '' // Access `type` safely
+  // if (!slug) {
+  //   redirect('/')
+  // }
+
+  const slug = params.slug || ""; // Access `slug` directly from params
   if (!slug) {
-    redirect('/')
+    redirect("/");
   }
 
   return (
@@ -32,7 +37,7 @@ const page = async ({ params }: { params: { slug: string } }) => {
         </section>
       </section>
     </div>
-  )
-}
+  );
+};
 
-export default page
+export default page;
