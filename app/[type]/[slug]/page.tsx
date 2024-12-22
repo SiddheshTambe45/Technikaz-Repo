@@ -4,9 +4,9 @@ import SingleBlogPage from "@/components/SingleBlogPage";
 // import Ads from '@/components/Ads'
 import Upcomings from "@/components/Upcomings";
 
-const page = async ({ params }: { params: { slug: string } }) => {
+const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
   // If params is a promise, await it before using it
-  const { slug } = await params; // Resolve the promise
+  const slug = (await params).slug; // Resolve the promise
 
   // const slug = params.slug || ""; // Access `slug` directly from params
   if (!slug) {
