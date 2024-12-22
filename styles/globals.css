@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Raleway:wght@400;700&display=swap');
+
+@layer utilities {
+  .h1 {
+    @apply text-[64px];
+  }
+  .h2 {
+    @apply text-[52px];
+  }
+  .h3 {
+    @apply text-[48px];
+  }
+  .h4 {
+    @apply text-[32px];
+  }
+  .h5 {
+    @apply text-[26px];
+  }
+  .h6 {
+    @apply text-[24px];
+  }
+
+  .big-para {
+    @apply text-[18px] leading-[24px];
+  }
+  .small-para {
+    @apply text-[16px] leading-[24px];
+  }
+
+  .heading-font {
+    @apply font-raleway;
+  }
+  .body-font {
+    @apply font-roboto;
+  }
+
+  .generic-viridian {
+    @apply text-[#00846B];
+  }
+  .dark-charcoal {
+    @apply text-[#333333];
+  }
+  .granite-gray {
+    @apply text-[#666666];
+  }
+  .spanish-gray {
+    @apply text-[#999999];
+  }
+  .custom-bg {
+    background-color: rgba(212, 235, 233, 0.61);
+  }
+
+  .bg-generic-viridian {
+    @apply bg-[#00846B];
+  }
+
+  .b-generic-viridian {
+    @apply border-[#00846B];
+  }
+}
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
+}

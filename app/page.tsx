@@ -1,101 +1,321 @@
-import Image from "next/image";
+// import Image from 'next/image'
+// import React from 'react'
 
-export default function Home() {
+// const page = () => {
+//   return (
+//     <div className="flex items-center justify-center h-screen max-w-7xl mx-auto">
+//       <section className="featured-blogs">
+//         <section className="featured-blogs-upper grid lg:grid-3">
+//           <div className="h-[500px] lg:col-span-2">
+//             <div className="aspect-[16/9]">
+//               <Image src="/assets/images/image15.png" alt="first image" fill />
+//             </div>
+//             <p>Hi this is the title</p>
+//           </div>
+
+//           <div className="h-[500px] lg:col-span-2">
+//             <div className="">
+//               <Image
+//                 src="/assets/images/image15.png"
+//                 alt="first image"
+//                 height={500}
+//                 width={cal - size(auto)}
+//               />
+//             </div>
+//             <p>Hi this is the title</p>
+//           </div>
+//         </section>
+//       </section>
+//     </div>
+//   )
+// }
+
+// export default page
+
+// import Image from 'next/image'
+// import React from 'react'
+
+// const Page = () => {
+//   const title =
+//     'My Visit To The Nintendo Museum Made My Life Flash Before My Eyes We spent two days at the shrine to all things Nintendo and reconnected'
+
+//   return (
+//     <div className="flex justify-center h-screen max-w-7xl mx-auto">
+//       <section className="featured-blogs w-full">
+//         <div className="grid grid-cols-3 gap-4">
+//           {/* Left Div */}
+//           <div className="relative col-span-2 aspect-[16/9]">
+//             <Image
+//               src="/assets/images/image15.png"
+//               alt="left image"
+//               fill
+//               className="object-cover"
+//             />
+//           </div>
+
+//           {/* Right Div */}
+//           <div className="relative col-span-1 overflow-hidden">
+//             <Image
+//               src="/assets/images/image16.png"
+//               alt="right image"
+//               fill
+//               className="object-cover object-right"
+//             />
+//           </div>
+//         </div>
+//       </section>
+//     </div>
+//   )
+// }
+
+// export default Page
+
+// -----------------------------------------------------------------
+
+// import Ads from '@/components/Ads'
+// import Image from 'next/image'
+// import Link from 'next/link'
+// import React from 'react'
+// import HomepageHeroSection from './HeroSection'
+// import { TechDealSection , MobileDealSection } from './dealsSection'
+// import Bloglist from './[type]/bloglist'
+// const Page = () => {
+//   const leftImageTitle = 'Nintendo Museum – A Journey Through Time Nintendo Muse'
+//   const test =
+//     'Nintendo Museum – A Journey Through Time Nintendo Muse A Journey Through Time Nintendo Muse'
+//   const rightImageTitle = 'Exploring the Legacy of Nintendo'
+
+//   {
+//     //h-screen -> h-auto  for future reference
+//   }
+
+//   return (
+//     <div className="flex flex-col justify-start h-auto max-w-7xl mx-auto px-2 md:px-1 lg:px-0">
+//       {/* <HomepageHeroSection /> */}
+//       <section className="featured-blogs w-full p-3">
+//         <div className="featured-blogs-upper grid grid-cols-1 lg:grid-cols-3 gap-4 h-auto">
+//           {/* Left Div */}
+//           <Link className="p-0 m-0 col-span-2 flex flex-col items-start" href="/games/123">
+//             {/* <div className="col-span-2 flex flex-col items-start"> */}
+//             {/* Fixed Height with Aspect Ratio */}
+//             <div className="relative h-[400px] w-full">
+//               <div className="relative w-full h-full aspect-[16/9]">
+//                 <Image
+//                   src="/assets/images/image15.png"
+//                   alt="left image"
+//                   fill
+//                   className="object-cover"
+//                 />
+//               </div>
+//             </div>
+//             {/* Text */}
+//             <p className="mt-2 text-left text-lg font-semibold leading-tight">{leftImageTitle}</p>
+//             {/* </div> */}
+//           </Link>
+
+//           {/* Right Div */}
+//           <div className="col-span-1 flex flex-col items-start">
+//             <Link className="relative w-full h-[400px]" href="/games/123">
+//               <Image
+//                 src="/assets/images/image16.png"
+//                 alt="right image"
+//                 fill
+//                 className="object-cover object-right"
+//               />
+//             </Link>
+//             <p className="mt-2 text-left text-lg font-semibold">{rightImageTitle}</p>
+//           </div>
+//         </div>
+
+//         <div className="featured-blogs-lower grid grid-cols-1 lg:grid-cols-4 gap-4 mt-10">
+//           {[0, 1, 2, 3].map((e) => (
+//             <Link key={e} className="flex flex-col items-start p-0 m-0" href="/media/123">
+//               <div className="relative w-full aspect-[16/9]">
+//                 <Image
+//                   src="/assets/images/image15.png"
+//                   alt="left image"
+//                   fill
+//                   className="object-cover"
+//                 />
+//               </div>
+//               <p className="mt-2 text-left text-lg font-semibold">{leftImageTitle}</p>
+//             </Link>
+//           ))}
+//         </div>
+//       </section>
+
+//       {
+//         // ads
+//       }
+
+//       {/* <TechDealSection /> */}
+//       {/* <MobileDealSection/> */}
+
+//       <section className="Tech-Deals mt-10 p-3">
+//         <Link className="h5 generic-viridian" href="/tech-deals">
+//           <span className="font-bold">Tech Deals</span> | See All
+//         </Link>
+//         <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 mt-5">
+//           {[0, 1, 2, 3].map((e) => (
+//             <Link key={e} className="flex flex-col items-start" href="/tech-deals/123">
+//               <div className="relative w-full aspect-[16/9]">
+//                 <Image
+//                   src="/assets/images/image15.png"
+//                   alt="left image"
+//                   fill
+//                   className="object-cover"
+//                 />
+//               </div>
+//               <p className="mt-2 text-left text-lg font-semibold">{leftImageTitle}</p>
+//             </Link>
+//           ))}
+//         </div>
+//       </section>
+
+//       <section className="Mobile-Deals mt-10 p-3">
+//         <Link className="h5 generic-viridian" href="/mobile-deals">
+//           <span className="font-bold">Mobile Deals</span> | See All
+//         </Link>
+//         <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 mt-5">
+//           {[0, 1, 2, 3].map((e) => (
+//             <Link key={e} className="flex flex-col items-start" href="/mobile-deals/123">
+//               <div className="relative w-full aspect-[16/9]">
+//                 <Image
+//                   src="/assets/images/image15.png"
+//                   alt="left image"
+//                   fill
+//                   className="object-cover"
+//                 />
+//               </div>
+//               <p className="mt-2 text-left text-lg font-semibold">{leftImageTitle}</p>
+//             </Link>
+//           ))}
+//         </div>
+//       </section>
+
+//           {/* <Bloglist params={{}}/> */}
+//       {
+//         //ads
+//       }
+
+//       <section className="popular-recent mt-10 lg:grid lg:grid-cols-3">
+//         <section className="lg:col-span-2 px-3">
+//           <div className="border border-y-2 border-x-0 border-black flex flex-row gap-8 my-4 py-2">
+//             <button type="button" className="h6 generic-viridian font-bold">
+//               Popular
+//             </button>
+//             <button type="button" className="h6 generic-viridian font-bold">
+//               Recent
+//             </button>
+//           </div>
+
+//           {[0, 1, 2, 3, 4, 5].map((e) => (
+//             <Link
+//               key={e}
+//               className="flex-row items-start grid grid-cols-3 my-3 w-full py-2 border border-b-2 border-x-0 border-t-0 border-black"
+//               href="/media/111"
+//             >
+//               <div className="relative w-full aspect-[16/9] col-span-1">
+//                 <Image
+//                   src="/assets/images/image15.png"
+//                   alt="left image"
+//                   fill
+//                   className="object-cover"
+//                 />
+//               </div>
+//               <div className="flex justify-content-center items-center w-full col-span-2">
+//                 <p className="mt-2 ml-4 text-left text-lg font-semibold">{leftImageTitle}</p>
+//               </div>
+//             </Link>
+//           ))}
+//         </section>
+//         <section className="lg:col-span-1 px-3">
+//           <div className="border-gray-400 border w-full h-[230px] my-4"></div>
+
+//           <div>
+//             <div>
+//               <div className="p-0 m-0 border-b-4 b-generic-viridian">
+//                 <button className="bg-generic-viridian text-white px-6 py-2">Upcomings</button>
+//               </div>
+//               <div className="flex flex-row justify-around items-center my-4">
+//                 {['Games', 'Phone', 'Movies', 'More'].map((e) => (
+//                   <button type="button" key={e} className="generic-viridian font-bold">
+//                     <span className={`${e === 'Games' ? 'border-b-4 b-generic-viridian' : ''}`}>
+//                       {e}
+//                     </span>
+//                   </button>
+//                 ))}
+//               </div>
+//             </div>
+
+//             <div className="border-2 b-generic-viridian p-2">
+//               {[0].map((e) => (
+//                 <div className="m-0 p-0" key={e}>
+//                   <Ads />
+//                 </div>
+//               ))}
+//             </div>
+//           </div>
+
+//           <div className="border-gray-400 border w-full h-[230px] my-4"></div>
+//         </section>
+//       </section>
+//     </div>
+//   )
+// }
+
+// export default Page
+
+// ------------------------------------
+
+// import Ads from '@/components/Ads'
+// import Image from 'next/image'
+// import Link from 'next/link'
+
+import React from 'react'
+import HomepageHeroSection from './HeroSection'
+// import Bloglist from './[type]/bloglist'
+import SectionBlogs from '@/components/SectionBlogs'
+import LeftSection, { BlogType } from '@/components/LeftSection'
+import Upcomings from '@/components/Upcomings'
+const Page = () => {
+  {
+    //h-screen -> h-auto  for future reference
+  }
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="flex flex-col justify-start h-auto max-w-7xl mx-auto px-2 md:px-1 lg:px-0">
+      <HomepageHeroSection />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      {
+        // ads
+      }
+
+      {/* <TechDealSection />
+
+      <MobileDealSection /> */}
+
+      <SectionBlogs type="tech" />
+
+      <SectionBlogs type="mobile" />
+
+      {/* <Bloglist params={{}} /> */}
+
+      <section className="popular-recent mt-10 lg:grid lg:grid-cols-3">
+        <section className="lg:col-span-2 px-3">
+          <LeftSection blogType={BlogType.Popular} />
+        </section>
+
+        <section className="lg:col-span-1 px-3">
+          <Upcomings initialCategory="Movies" />
+        </section>
+      </section>
+
+      {
+        //ads
+      }
     </div>
-  );
+  )
 }
+
+export default Page
