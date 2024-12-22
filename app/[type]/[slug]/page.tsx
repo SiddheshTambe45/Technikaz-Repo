@@ -5,16 +5,10 @@ import SingleBlogPage from "@/components/SingleBlogPage";
 import Upcomings from "@/components/Upcomings";
 
 const page = async ({ params }: { params: { slug: string } }) => {
-  // const resolvedParams = await params // Await the params object
-  // const slug = resolvedParams.slug || '' // Access `type` safely
-  // if (!slug) {
-  //   redirect('/')
-  // }
+  // If params is a promise, await it before using it
+  const resolvedParams = await params; // Resolve the promise
 
-  // const slug = ((await params)?.slug as string) || "";
-
-  // If params is a promise, await it
-  const slug = params.slug || "";
+  const slug = resolvedParams.slug || "";
 
   // const slug = params.slug || ""; // Access `slug` directly from params
   if (!slug) {
