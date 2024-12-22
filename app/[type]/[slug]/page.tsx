@@ -4,21 +4,7 @@ import SingleBlogPage from "@/components/SingleBlogPage";
 // import Ads from '@/components/Ads'
 import Upcomings from "@/components/Upcomings";
 
-// interface SearchParamProps {
-//   params?: Promise<SegmentParams>;
-//   searchParams?: Promise<{ [key: string]: string | string[] | undefined }>;
-// }
-
-// Define a custom type for the params
-interface SegmentParams {
-  slug: string; // Adjust this according to your route structure
-}
-
-// Define PageProps with `params` of type `SegmentParams`
-interface PageProps {
-  params: SegmentParams; // Make it flexible in case it's a Promise
-}
-const page = async ({ params }: PageProps) => {
+const page = async ({ params }: { params: { slug: string } }) => {
   // const resolvedParams = await params // Await the params object
   // const slug = resolvedParams.slug || '' // Access `type` safely
   // if (!slug) {
@@ -28,7 +14,7 @@ const page = async ({ params }: PageProps) => {
   // const slug = ((await params)?.slug as string) || "";
 
   // If params is a promise, await it
-  const { slug } = params;
+  const slug = params.slug || "";
 
   // const slug = params.slug || ""; // Access `slug` directly from params
   if (!slug) {
