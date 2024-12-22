@@ -34,8 +34,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        roboto: ['Roboto"', ...fontFamily.sans],
-        raleway: ['Raleway"', ...fontFamily.sans],
+        roboto: ["Roboto", ...fontFamily.sans],
+        raleway: ["Raleway", ...fontFamily.sans],
       },
       borderRadius: {
         lg: "var(--radius)",
