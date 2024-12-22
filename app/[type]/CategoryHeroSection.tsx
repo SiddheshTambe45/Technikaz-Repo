@@ -13,6 +13,8 @@ const fetchBlogs = async (
   type?: string,
   filter?: string
 ): Promise<BlogCardStruct[]> => {
+  if (type) console.log(type);
+
   // Mock fetching blog data (replace with actual API call in production)
   const allBlogs: BlogCardStruct[] = [
     {
@@ -84,6 +86,9 @@ const CategoryHeroSection = async ({
 }) => {
   const type = params.type;
   const selectedSubType = params.selectedSubType;
+
+  if (type && selectedSubType) console.log(type, selectedSubType);
+
   const blogs = await fetchBlogs(params.type, "popular");
 
   const firstTwoBlogs = blogs.slice(0, 3);
