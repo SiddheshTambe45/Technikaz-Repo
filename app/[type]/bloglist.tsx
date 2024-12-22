@@ -8,14 +8,49 @@ type BlogCardStruct = {
   imageUrl: string;
 };
 
-const fetchBlogs = async (type?: string, filter?: string): Promise<BlogCardStruct[]> => {
+const fetchBlogs = async (
+  type?: string,
+  filter?: string
+): Promise<BlogCardStruct[]> => {
+  if (type && filter) console.log(type, filter);
+
   const allBlogs: BlogCardStruct[] = [
-    { title: "Understanding Next.js", description: "Learn Next.js basics", slug: "understanding-nextjs", imageUrl: "/assets/images/image15.png" },
-    { title: "React vs Vue", description: "Compare React and Vue.js", slug: "react-vs-vue", imageUrl: "/assets/images/image15.png" },
-    { title: "Advanced TypeScript", description: "Deep dive into TypeScript", slug: "advanced-typescript", imageUrl: "/assets/images/image15.png" },
-    { title: "Understanding Next.js", description: "Learn Next.js basics", slug: "understanding-nextjs", imageUrl: "/assets/images/image15.png" },
-    { title: "React vs Vue", description: "Compare React and Vue.js", slug: "react-vs-vue", imageUrl: "/assets/images/image15.png" },
-    { title: "Advanced TypeScript", description: "Deep dive into TypeScript", slug: "advanced-typescript", imageUrl: "/assets/images/image15.png" },
+    {
+      title: "Understanding Next.js",
+      description: "Learn Next.js basics",
+      slug: "understanding-nextjs",
+      imageUrl: "/assets/images/image15.png",
+    },
+    {
+      title: "React vs Vue",
+      description: "Compare React and Vue.js",
+      slug: "react-vs-vue",
+      imageUrl: "/assets/images/image15.png",
+    },
+    {
+      title: "Advanced TypeScript",
+      description: "Deep dive into TypeScript",
+      slug: "advanced-typescript",
+      imageUrl: "/assets/images/image15.png",
+    },
+    {
+      title: "Understanding Next.js",
+      description: "Learn Next.js basics",
+      slug: "understanding-nextjs",
+      imageUrl: "/assets/images/image15.png",
+    },
+    {
+      title: "React vs Vue",
+      description: "Compare React and Vue.js",
+      slug: "react-vs-vue",
+      imageUrl: "/assets/images/image15.png",
+    },
+    {
+      title: "Advanced TypeScript",
+      description: "Deep dive into TypeScript",
+      slug: "advanced-typescript",
+      imageUrl: "/assets/images/image15.png",
+    },
   ];
 
   // if (filter === "popular") return allBlogs.slice(0, 2);
@@ -24,7 +59,11 @@ const fetchBlogs = async (type?: string, filter?: string): Promise<BlogCardStruc
   return allBlogs;
 };
 
-const Bloglist = async ({params}: { params: { type: string , selectedSubType:string } }) => {
+const Bloglist = async ({
+  params,
+}: {
+  params: { type: string; selectedSubType: string };
+}) => {
   const type = params.type;
   const selectedSubType = params.selectedSubType;
   // Fetch server-side data
