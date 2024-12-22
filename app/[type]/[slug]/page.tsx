@@ -16,7 +16,7 @@ interface SegmentParams {
 
 // Define PageProps with `params` of type `SegmentParams`
 interface PageProps {
-  params: SegmentParams | Promise<SegmentParams>; // Make it flexible in case it's a Promise
+  params: SegmentParams; // Make it flexible in case it's a Promise
 }
 const page = async ({ params }: PageProps) => {
   // const resolvedParams = await params // Await the params object
@@ -28,9 +28,7 @@ const page = async ({ params }: PageProps) => {
   // const slug = ((await params)?.slug as string) || "";
 
   // If params is a promise, await it
-  const resolvedParams = await params;
-
-  const slug = resolvedParams.slug || "";
+  const { slug } = params;
 
   // const slug = params.slug || ""; // Access `slug` directly from params
   if (!slug) {
